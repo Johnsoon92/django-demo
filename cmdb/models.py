@@ -8,8 +8,8 @@ class AbstractUsedModel(AbstractTimedModel):
     class Meta:
         abstract = True
 
-    create_user = models.ForeignKey('User', on_delete=models.DO_NOTHING)
-    last_update_user = models.ForeignKey('User', on_delete=models.DO_NOTHING)
+    # create_user = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING)
+    # last_update_user = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING)
 
 
 class MrRoomTb(AbstractUsedModel):

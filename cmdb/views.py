@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from cmdb.models import MrRoomTb
 
 
+
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 

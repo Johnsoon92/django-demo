@@ -8,5 +8,6 @@ class AbstractTimedModel(models.Model):
 
     create_time = models.DateTimeField(auto_now_add=True)
     last_update_time = models.DateTimeField(auto_now=True)
-    create_user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    last_update_user = models.ForeignKey('User', on_delete=models.DO_NOTHING)
+    create_user = models.ForeignKey(User, related_name='+', on_delete=models.DO_NOTHING)
+    last_update_user = models.ForeignKey(
+        User, related_name='+', on_delete=models.DO_NOTHING)
